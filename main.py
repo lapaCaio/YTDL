@@ -21,7 +21,7 @@ def download_file():
     user_path = path_label.cget("text")
     screen.title('Baixando...')
     # download video
-    mp4_video = YouTube(get_link).streams.get_highest_resolution().download()
+    mp4_video = YouTube(get_link).streams.get_highest_resolution().download()  # .get_only_audio
     vid_clip = VideoFileClip(mp4_video)
     vid_clip.close()
     # move file to selected directory
